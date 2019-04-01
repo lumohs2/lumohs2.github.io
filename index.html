@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<title>Luan Santos</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!---------Go-to-top-------------->
+<div class="btngototop">
+<button onclick="topFunction()" id="topbtn" title="Voltar para o topo"><i class="fas fa-chevron-up"></i></button>
+</div>
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        document.getElementById("topbtn").style.display = "block";
+        } else {
+        document.getElementById("topbtn").style.display = "none";
+        }
+    }
+function topFunction() {
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<!------BarraDeNavegação-------->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" onclick="gotoacademic()">Acadêmico</a>
+                    <script class="academicscroll">
+                        function gotoacademic(){
+                            window.scrollTo(0, 1700);
+                        }
+                    </script>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="gotocontact()">Contato</a>
+                    <script>
+                        function gotocontact(){
+                            window.scrollTo(0, 2500);
+                        }
+                    </script>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </section>
+
+ <!---------Inicio-------->
+ <section id="inicio">
+    <div class="mainlogo">
+        <img src="logowhite.png" class="mainlogo">
+    </div>
+    <h1>Luan Santos</h1>
+    <h4>Acadêmico em Ciência e Tecnologia</h4>
+    <div class="gotodown" onclick="gotoabout()">
+    <i class="fas fa-arrow-down"></i>
+    <script>
+        function gotoabout(){
+            window.scrollTo(0,1100);
+        }
+    </script>
+    </div>
+ </section>
+
+<!----------Sobre--------->
+    <section id="about">
+        <div class="container">
+            <div class="iconperson">
+            <i class="far fa-user-circle"></i>
+            </div>
+            <h2>Um pouco sobre mim!</h2>
+        <div class="row">
+            <p>Meu nome é Luan Vinicius Luna dos Santos, tenho 17 anos. Nasci em 30 de Abril de 2001. Cursei meu ensino médio na escola O Serviço Social da Indústria – SESI, em Mossoró, Rio Grande do Norte. Atualmente sou aluno do curso de Ciência e Tecnologia na Universidade Federal do Rio Grande do Norte - UFRN.</p>
+            <button class="aboutbtn" onclick="aboutfullop()">Veja mais!</button>
+
+            <script>
+                function aboutfullop(){
+                    open("sobre.html");
+                }
+            </script>
+
+        </div>
+        </div>
+    </section>
+
+<!----------Acadêmico--------->
+    <section id="academic">
+        <div class="container">
+            <div class="icont">
+            <i class="fas fa-trophy"></i></div>
+            <h2>Méritos e Conquistas</h2>
+            <div class="row academic">
+
+                <div class="col-md-6 text-center">
+                    <div class="icon">
+                    <i class="fas fa-award"></i>
+                    </div>
+                    <h1>Mérito estadual na olimpíada brasileira de robótica</h1>                   
+                </div>
+
+                <div class="col-md-6 text-center">
+                    <div class="icon">
+                    <i class="fas fa-robot"></i>
+                    </div>
+                    <h1>Mérito estadual (6º lugar) na olimpíada de robótica - First Lego League</h1>                
+                </div> 
+            
+                <div class="col-md-6 text-center">
+                    <div class="icon">
+                    <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h1>Certificado de técnico em empetróleo e gás pelo SENAI</h1>                   
+                </div>
+            
+                <div class="col-md-6 text-center">
+                    <div class="icon">
+                    <i class="fas fa-laptop-code"></i>
+                    </div>                   
+                    <h1>Certificado de Lógica de programação pelo SENAI</h1>
+                </div>
+ 
+            </div>          
+        </div>
+    </section>
+
+<!----------Contato------------> 
+    <section id="contact">
+        <div class="container">
+            <div class="contaticon">
+            <i class="far fa-address-card"></i>
+            </div>
+            <h1>Contate-me!</h1>
+            <div class="row">
+            <div class="col-md-6">
+            <form class="contact-form">
+
+            <div class="form-group">
+            <input type="text" class="form-control" placeholder="Seu nome" required>
+            </div>
+                 
+            <div class="form-group">
+            <input type="email" class="form-control" placeholder="Seu email" required>
+            </div>
+                
+            <div class="form-group">
+            <textarea class="form-control" rows="6" placeholder="Sua mensagem" id="suamsg" required></textarea>
+            </div>
+
+            <div>
+            <button type="button" class="btnform" value="enviar" id="enviarBtn" onclick="enviado()">Enviar</button>
+            <script>
+                function enviado(){
+                    document.getElementById("enviarBtn").style.background= "#A0FF9D";
+                    document.getElementById("enviarBtn").innerHTML= "Enviado!";
+                    document.getElementById("enviarBtn").style.border= "#036800";
+                    document.getElementById("enviarBtn").style.color= "#036800";
+                    document.getElementById("enviarBtn").disabled = true;
+                    return false;
+                }
+
+            </script>
+            </div>
+            </form>
+            </div>
+            
+            <div class="col-md-3 contact-info">
+                <div class="follow"><i class="fas fa-map-marker-alt"></i><b> Endereço: </b>Natal, Rio Grande do Norte</div>
+
+                <div class="follow"><i class="fas fa-envelope"></i><b> Email: </b>luan.vinicius.ls@hotmail.com</div>
+
+                <div class="follow"><i class="fas fa-phone-square"></i><b> Telefone: </b>(84) 9867-7229</div>
+
+                <div class="follow"><label><i class="fas fa-globe"></i><b>Redes Sociais: </b></label>
+                    <a href="#"><i class="fab fa-facebook-square" onclick="openfbk()"></i></a>
+                    <script>
+                        function openfbk(){
+                            open("https://www.facebook.com/luan.vinicius.ls");
+                        }
+                    </script>
+                    <a href="#"><i class="fab fa-instagram" onclick="openinst()"></i></a>
+                    <script>
+                        function openinst(){
+                        open("https://www.instagram.com/_luansaantos/?hl=pt-br%22");
+                        }
+                    </script>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-------------footer--------------->
+    <section id="footer">
+        <div class="eject">
+            <h5>ProSempre - EJECT © 2019</h5>
+            <h5>Luan Santos - Todos os direitos reservados.</h5>
+        </div>
+
+    </section>
+
+</body>
+</html>
